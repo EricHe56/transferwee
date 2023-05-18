@@ -521,7 +521,9 @@ if __name__ == '__main__':
         prog='transferwee',
         description='Download/upload files via wetransfer.com'
     )
-    sp = ap.add_subparsers(dest='action', help='action', required=True)
+    #sp = ap.add_subparsers(dest='action', help='action', required=True)
+    sp = ap.add_subparsers(dest='action', help='action')
+    sp.required = True
 
     # download subcommand
     dp = sp.add_parser('download', help='download files')
